@@ -120,7 +120,10 @@ if __name__ == '__main__':
     username = get_google_username()
     password = get_google_password()
 
-    driver = start_browser()
+    # driver = start_browser()
+    from webdriver_manager.chrome import ChromeDriverManager
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+
     login_to_google(driver, username, password)
     videos = scrape_watch_later_playlist(driver)
 
