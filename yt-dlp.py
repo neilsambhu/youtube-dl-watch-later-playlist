@@ -9,6 +9,10 @@ import getpass
 import subprocess
 import os
 
+# auto save
+subprocess.run("git commit -a -m \"auto save\"",capture_output=False)
+subprocess.run("git push",capture_output=False)
+
 download_folder = '~/Downloads/'
 download_folder = 'G:/My Drive/File Transfers/Transfer To Individuals/To Neil/YouTube Downloads/2022 04 16 Watch Later/'
 download_folder = 'G:/My Drive/File Transfers/Transfer To Individuals/To Neil/YouTube Downloads/2022 04 19 Dr. Boz/'
@@ -139,8 +143,10 @@ if __name__ == '__main__':
     # username = ""
     # password = ""
     # prefix = f"yt-dlp -i -u {username} -p {password} --cookies youtube.com_cookies.txt --compat-options no-live-chat --download-archive myarchive.txt "
-    prefix = f"yt-dlp -i --cookies youtube.com_cookies.txt --compat-options no-live-chat --download-archive myarchive.txt --config-locations yt-dlp.conf "
-    prefix = f"yt-dlp -i --config-locations yt-dlp.conf --cookies youtube.com_cookies.txt --sub-langs en.* --download-archive myarchive.txt "
+    # prefix = f"yt-dlp -i --cookies youtube.com_cookies.txt --compat-options no-live-chat --download-archive myarchive.txt --config-locations yt-dlp.conf "
+    # prefix = f"yt-dlp -i --config-locations yt-dlp.conf --cookies youtube.com_cookies.txt --sub-langs en.* --download-archive myarchive.txt "
+    # add "--sleep-subtitles SECONDS" to hopefully prevent "Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    prefix = f"yt-dlp -i --config-locations yt-dlp.conf --cookies youtube.com_cookies.txt --sub-langs en.* --download-archive myarchive.txt --sleep-subtitles 10 "
     # output = "-o \"" + download_folder + "%(title)s.%(ext)s\" "
     # output = "-o '" + download_folder + "{} %(title)s.%(ext)s' ".format(idx)
     # output = "-o \"" + download_folder + "%(playlist_index)s%(title)s.%(ext)s\" "
