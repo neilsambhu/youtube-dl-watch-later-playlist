@@ -145,8 +145,14 @@ if __name__ == '__main__':
     # prefix = f"yt-dlp -i -u {username} -p {password} --cookies youtube.com_cookies.txt --compat-options no-live-chat --download-archive myarchive.txt "
     # prefix = f"yt-dlp -i --cookies youtube.com_cookies.txt --compat-options no-live-chat --download-archive myarchive.txt --config-locations yt-dlp.conf "
     # prefix = f"yt-dlp -i --config-locations yt-dlp.conf --cookies youtube.com_cookies.txt --sub-langs en.* --download-archive myarchive.txt "
-    # add "--sleep-subtitles SECONDS" to hopefully prevent "Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
-    prefix = f"yt-dlp -i --config-locations yt-dlp.conf --cookies youtube.com_cookies.txt --sub-langs en.* --download-archive myarchive.txt --sleep-subtitles 10 "
+    '''
+    add "--sleep-subtitles SECONDS" to hopefully prevent "Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    '''
+    # prefix = f"yt-dlp -i --config-locations yt-dlp.conf --cookies youtube.com_cookies.txt --sub-langs en.* --download-archive myarchive.txt --sleep-subtitles 10 "
+    '''
+    disable parallel downloads
+    '''
+    prefix = f"yt-dlp -i --config-locations yt-dlp.conf --cookies youtube.com_cookies.txt --sub-langs en.* --download-archive myarchive.txt --sleep-subtitles 10 --concurrent-fragments 1"
     # output = "-o \"" + download_folder + "%(title)s.%(ext)s\" "
     # output = "-o '" + download_folder + "{} %(title)s.%(ext)s' ".format(idx)
     # output = "-o \"" + download_folder + "%(playlist_index)s%(title)s.%(ext)s\" "
@@ -170,7 +176,6 @@ if __name__ == '__main__':
     quality = "-f \"bestvideo[ext=mp4]+bestaudio[ext=mp4]/bestvideo+bestaudio\" --merge-output-format mp4 --write-auto-sub --embed-subs "
     # quality = "-f \"bestvideo[ext=mp4]+bestaudio[ext=mp4]/bestvideo+bestaudio\" --merge-output-format mp4 --write-auto-sub --sub-format \"srt\" "
     # quality = "-f \"bestvideo[ext=mp4]+bestaudio[ext=mp4]/bestvideo+bestaudio\" --merge-output-format mp4 --write-auto-sub --convert-subs \"srt\" "
-    # quality = ""
     video = ":ytwatchlater "
     # need to add "--playlist-reverse" option to download videos from oldest to newest
     quality += "--playlist-reverse "
