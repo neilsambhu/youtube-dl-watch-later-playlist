@@ -152,7 +152,7 @@ if __name__ == '__main__':
     '''
     disable parallel downloads
     '''
-    prefix = f"yt-dlp -i --config-locations yt-dlp.conf --cookies youtube.com_cookies.txt --sub-langs en.* --download-archive myarchive.txt --sleep-subtitles 10 --concurrent-fragments 1"
+    prefix = f"yt-dlp -i --config-locations yt-dlp.conf --cookies youtube.com_cookies.txt --sub-langs en.* --download-archive myarchive.txt --sleep-subtitles 10 --concurrent-fragments 1 "
     # output = "-o \"" + download_folder + "%(title)s.%(ext)s\" "
     # output = "-o '" + download_folder + "{} %(title)s.%(ext)s' ".format(idx)
     # output = "-o \"" + download_folder + "%(playlist_index)s%(title)s.%(ext)s\" "
