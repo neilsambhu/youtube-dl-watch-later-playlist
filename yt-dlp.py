@@ -163,7 +163,8 @@ if __name__ == '__main__':
     # output = "-o \"" + download_folder + f"{idx:{0}{3}}_%(channel)s_%(title)s.%(ext)s\" "
     # output = "-o \"" + download_folder + f"%(playlist_index)s_%(channel)s_\'%(title)s\'.%(ext)s\" "
     # output = "-o \"" + os.path.join(download_folder, f"%(playlist_index)s_%(channel)s_\'%(title)s\'.%(ext)s\" ")
-    output = "-o \"" + os.path.join(download_folder, f"%(autonumber)s_%(channel)s_\'%(title)s\'.%(ext)s\" ")
+    # output = "-o \"" + os.path.join(download_folder, f"%(autonumber)s_%(channel)s_\'%(title)s\'.%(ext)s\" ")
+    output = "-o \"" + os.path.join(download_folder, f"00015_%(channel)s_\'%(title)s\'.%(ext)s\" ")
     # quality = "-f \"bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]\" "
     # quality = "-f \"bestvideo[height<=2160][ext=mp4]+bestaudio[ext=mp4]\" "
     # quality = "-f \"bestvideo[height<=1080]\" "
@@ -178,8 +179,9 @@ if __name__ == '__main__':
     # quality = "-f \"bestvideo[ext=mp4]+bestaudio[ext=mp4]/bestvideo+bestaudio\" --merge-output-format mp4 --write-auto-sub --convert-subs \"srt\" "
     video = ":ytwatchlater "
     # need to add "--playlist-reverse" option to download videos from oldest to newest
-    quality += "--playlist-reverse "
-    video = "https://www.youtube.com/c/DrBozAnnetteBosworthMD/videos?view=0&sort=da&flow=grid "
+    # quality += "--playlist-reverse "
+    # video = "https://www.youtube.com/c/DrBozAnnetteBosworthMD/videos?view=0&sort=da&flow=grid "
+    video = "https://www.youtube.com/watch?v=eaAkv-J4-go "
     cmd = prefix + output + quality + video
 
     print(cmd)
