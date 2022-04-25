@@ -17,6 +17,7 @@ download_folder = '~/Downloads/'
 download_folder = 'G:/My Drive/File Transfers/Transfer To Individuals/To Neil/YouTube Downloads/2022 04 16 Watch Later/'
 download_folder = 'G:/My Drive/File Transfers/Transfer To Individuals/To Neil/YouTube Downloads/2022 04 19 Dr. Boz/'
 # download_folder = 'G:/My Drive/File Transfers/Transfer To Individuals/To Neil/YouTube Downloads/2022 04 19 Watch Later/'
+download_folder = 'G:/My Drive/File Transfers/Transfer To Individuals/To Neil/YouTube Downloads/2022 04 25 Watch Later/'
 
 
 # def get_google_username():
@@ -164,7 +165,8 @@ if __name__ == '__main__':
     # output = "-o \"" + download_folder + f"%(playlist_index)s_%(channel)s_\'%(title)s\'.%(ext)s\" "
     # output = "-o \"" + os.path.join(download_folder, f"%(playlist_index)s_%(channel)s_\'%(title)s\'.%(ext)s\" ")
     # output = "-o \"" + os.path.join(download_folder, f"%(autonumber)s_%(channel)s_\'%(title)s\'.%(ext)s\" ")
-    output = "-o \"" + os.path.join(download_folder, f"00015_%(channel)s_\'%(title)s\'.%(ext)s\" ")
+    # output = "-o \"" + os.path.join(download_folder, f"00015_%(channel)s_\'%(title)s\'.%(ext)s\" ")
+    output = "-o \"" + os.path.join(download_folder, f"%(epoch)s_%(channel)s_\'%(title)s\'.%(ext)s\" ")
     # quality = "-f \"bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]\" "
     # quality = "-f \"bestvideo[height<=2160][ext=mp4]+bestaudio[ext=mp4]\" "
     # quality = "-f \"bestvideo[height<=1080]\" "
@@ -181,7 +183,7 @@ if __name__ == '__main__':
     # need to add "--playlist-reverse" option to download videos from oldest to newest
     # quality += "--playlist-reverse "
     # video = "https://www.youtube.com/c/DrBozAnnetteBosworthMD/videos?view=0&sort=da&flow=grid "
-    video = "https://www.youtube.com/watch?v=eaAkv-J4-go "
+    video = "https://www.youtube.com/watch?v=rlKQUfs3Pnk "
     cmd = prefix + output + quality + video
 
     print(cmd)
