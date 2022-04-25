@@ -183,7 +183,7 @@ if __name__ == '__main__':
     # need to add "--playlist-reverse" option to download videos from oldest to newest
     # quality += "--playlist-reverse "
     # video = "https://www.youtube.com/c/DrBozAnnetteBosworthMD/videos?view=0&sort=da&flow=grid "
-    video = "https://www.youtube.com/watch?v=rlKQUfs3Pnk "
+    video = "https://youtu.be/rlKQUfs3Pnk "
     cmd = prefix + output + quality + video
 
     print(cmd)
