@@ -167,8 +167,8 @@ if __name__ == '__main__':
     # output = "-o \"" + os.path.join(download_folder, f"%(autonumber)s_%(channel)s_\'%(title)s\'.%(ext)s\" ")
     # output = "-o \"" + os.path.join(download_folder, f"00015_%(channel)s_\'%(title)s\'.%(ext)s\" ")
     output = "-o \"" + os.path.join(download_folder, f"%(epoch)s_%(channel)s_\'%(title)s\'.%(ext)s\" ")
-    # quality = "-f \"bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]\" "
-    quality = "-f \"bestvideo[height<=2160][ext=mp4]+bestaudio[ext=mp4]\"  --merge-output-format mp4 --write-auto-sub --embed-subs "
+    quality = "-f \"bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]\" --merge-output-format mp4 --write-auto-sub --embed-subs "
+    # quality = "-f \"bestvideo[height<=2160][ext=mp4]+bestaudio[ext=mp4]\" "
     # quality = "-f \"bestvideo[height<=1080]\" "
     # quality = "-f \"best\" "
     # quality = "-f 22 "
