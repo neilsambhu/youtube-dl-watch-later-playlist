@@ -182,8 +182,8 @@ if __name__ == '__main__':
     video = "https://www.youtube.com/playlist?list=WL "
     # need to add "--playlist-reverse" option to download videos from oldest to newest
     # quality += "--playlist-reverse "
-    # video = "https://www.youtube.com/c/DrBozAnnetteBosworthMD/videos?view=0&sort=da&flow=grid "
-    video = "https://www.youtube.com/playlist?list=PLKPUR4TtLB38MyfNLh0oIJ5x0ZBzo8GDV "
+    video = "https://www.youtube.com/c/DrBozAnnetteBosworthMD/videos?view=0&sort=da&flow=grid "
+    # video = "https://www.youtube.com/playlist?list=PLKPUR4TtLB38MyfNLh0oIJ5x0ZBzo8GDV "
     cmd = prefix + output + quality + video
 
     print(cmd)
