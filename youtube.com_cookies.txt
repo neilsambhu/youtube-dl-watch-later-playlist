@@ -3,7 +3,6 @@
 
 .youtube.com	TRUE	/	TRUE	2588803310	GPS	1
 .youtube.com	TRUE	/	FALSE	0	PREF	tz=UTC&f6=40000000&hl=en
-.youtube.com	TRUE	/	TRUE	1650910598	SAPISID	ibLyXk0zYlIIpbmh/AurW4rt_K5mBjoHTN
 .youtube.com	TRUE	/	TRUE	1665995807	VISITOR_INFO1_LIVE	RLnD5RUD20w
 .youtube.com	TRUE	/	TRUE	0	YSC	MHlWlLgf5vw
 .youtube.com	TRUE	/	TRUE	1713207054	__Secure-3PAPISID	ibLyXk0zYlIIpbmh/AurW4rt_K5mBjoHTN
